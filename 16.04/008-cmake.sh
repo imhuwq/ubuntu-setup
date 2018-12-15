@@ -5,7 +5,7 @@ source files/sscmd.sh
 
 call_seperator
 echo -e "${Red}Step 1${NC}: download source code"
-wget http://gizmo-statics-public.oss-cn-shenzhen.aliyuncs.com/cmake/cmake-3.10.3.tar.gz
+wget https://download-public-imhuwq.oss-cn-shenzhen.aliyuncs.com/cmake/cmake-3.10.3.tar.gz
 tar -xzvf cmake-3.10.3.tar.gz
 mkdir -p build
 rm -rf build/cmake-3.10.3

@@ -10,8 +10,9 @@ sudo apt upgrade
 
 call_seperator
 echo -e "${Red}Step 2${NC}: setup directories"
-mkdir -p $HOME/config
 mkdir -p $HOME/app
+mkdir -p $HOME/build
+mkdir -p $HOME/config
 mkdir -p $HOME/git/github
 
 call_seperator

@@ -20,7 +20,7 @@ else
 fi
 
 call_seperator
-echo -e "${Red}Step 4${NC}: update bashrc file"
+echo -e "${Red}Step 3${NC}: update bashrc file"
 nvm_begin='# nvm settings'
 nvm1='export NVM_DIR="$HOME/.nvm"'
 nvm2='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm'
@@ -35,7 +35,7 @@ if [ -f $HOME/.zshrc ]; then
 fi
 
 call_seperator
-echo -e "${Red}Step 3${NC}: install node and npm"
+echo -e "${Red}Step 4${NC}: install node and npm"
 source ~/.bashrc && source ~/.zshrc
 nvm install 10.14.2
 nvm use node

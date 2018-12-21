@@ -23,6 +23,12 @@ sudo usermod -aG docker ${USER}
 docker --version
 
 call_seperator
+echo -e "${Red}Step 4${NC}: install docker-compose"
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+call_seperator
 source files/uscmd.sh
 echo -e "${Green}Done!${NC}"
 echo ""

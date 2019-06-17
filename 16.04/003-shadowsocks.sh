@@ -15,12 +15,6 @@ update_file /etc/privoxy/config 'forward-socks5 / 127.0.0.1:1080 .' sudo
 sudo service privoxy restart
 
 call_seperator
-echo -e "${Red}Step 3${NC}: install polipo"
-sudo apt install -y polipo
-sudo cp files/polipo/etc/polipo/config
-sudo service polipo restart
-
-call_seperator
 echo -e "${Red}Step 4${NC}: install proxychains"
 sudo apt install -y proxychains
 sudo sed -i -E "s/socks4\s+127.0.0.1\s+9050/# socks4 127.0.0.1 9050/" /etc/proxychains.conf

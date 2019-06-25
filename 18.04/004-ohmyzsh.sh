@@ -17,8 +17,8 @@ sed -i -E "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"af-magic\"/" $HOME/.zshrc
 
 call_seperator
 ss_begin='# setup http(s) proxy to shadowsocks'
-sscmd='alias sscmd="source $HOME/app/shadowsocks/sscmd.sh"'
-uscmd='alias uscmd="source $HOME/app/shadowsocks/uscmd.sh"'
+sscmd='alias sscmd="source $HOME/script/shadowsocks/sscmd.sh"'
+uscmd='alias uscmd="source $HOME/script/shadowsocks/uscmd.sh"'
 echo -e "${Red}Step 4${NC}: set shadowsocks command line alias"
 grep -q "$ss_begin" $HOME/.zshrc || echo -e "\n$ss_begin\n$sscmd\n$uscmd\n" >> $HOME/.zshrc
 

@@ -30,8 +30,8 @@
   rotate_cw = None
   scaled_zoom = None
   search = None
-  split_horiz = <Primary><Shift>Down
-  split_vert = <Primary><Shift>Right
+  split_horiz = <Primary><Shift><Alt>Down
+  split_vert = <Primary><Shift><Alt>Right
   toggle_scrollbar = None
   toggle_zoom = <Primary><Shift><Alt>x
   ungroup_all = None
@@ -51,5 +51,5 @@
 [profiles]
   [[default]]
     background_darkness = 0.7
+    background_image = None
     background_type = transparent
-    cursor_color = "#aaaaaa"

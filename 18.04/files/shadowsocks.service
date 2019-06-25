@@ -1,0 +1,10 @@
+[Unit]
+Description=Start shadowsocks client at boot
+
+[Service]
+ExecStart=/usr/local/bin/sslocal -c /etc/shadowsocks/sslocal.json -d start
+Type=forking
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

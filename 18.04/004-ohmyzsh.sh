@@ -16,11 +16,12 @@ echo -e "${Red}Step 3${NC}: change default theme"
 sed -i -E "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"af-magic\"/" $HOME/.zshrc
 
 call_seperator
+echo -e "${Red}Step 4${NC}: set shadowsocks command line alias"
 ss_begin='# setup http(s) proxy to shadowsocks'
 sscmd='alias sscmd="source $HOME/script/shadowsocks/sscmd.sh"'
 uscmd='alias uscmd="source $HOME/script/shadowsocks/uscmd.sh"'
-echo -e "${Red}Step 4${NC}: set shadowsocks command line alias"
-grep -q "$ss_begin" $HOME/.zshrc || echo -e "\n$ss_begin\n$sscmd\n$uscmd\n" >> $HOME/.zshrc
+sudoe='alias sudo="sudo -E"'
+grep -q "$ss_begin" $HOME/.zshrc || echo -e "\n$ss_begin\n$sscmd\n$uscmd\n$sudoe\n" >> $HOME/.zshrc
 
 call_seperator
 echo -e "${Cyan}Done!${NC}"

@@ -21,7 +21,8 @@ cp files/uscmd.sh $HOME/script/shadowsocks/uscmd.sh
 ss_begin='# setup http(s) proxy to shadowsocks'
 sscmd='alias sscmd="source $HOME/script/shadowsocks/sscmd.sh"'
 uscmd='alias uscmd="source $HOME/script/shadowsocks/uscmd.sh"'
-grep -q "$ss_begin" $HOME/.bashrc || echo -e "\n$ss_begin\n$sscmd\n$uscmd\n" >> $HOME/.bashrc
+sudoe='alias sudo="sudo -E"'
+grep -q "$ss_begin" $HOME/.bashrc || echo -e "\n$ss_begin\n$sscmd\n$uscmd\n$sudoe\n" >> $HOME/.bashrc
 
 call_seperator
 echo -e "\n"

@@ -13,8 +13,12 @@ sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
 
 call_seperator
-echo -e "${Red}Step 2${NC}: install dependencies for nvm"
+echo -e "${Red}Step 3${NC}: install dependencies for nvm"
 sudo apt install -y make build-essential libssl-dev
+
+call_seperator
+echo -e "${Red}Step 4${NC}: install dependencies for docker"
+sudo apt install -y apt-transport-https  ca-certificates curl gnupg-agent software-properties-common
 
 call_seperator
 echo -e "${Green}Done!${NC}\n"

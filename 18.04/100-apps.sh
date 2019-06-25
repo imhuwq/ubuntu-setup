@@ -30,6 +30,13 @@ echo -e "${Red}Step 3${NC}: install screenfetch"
 sudo apt install -y screenfetch
 
 call_seperator
+echo -e "${Red}Step 3${NC}: install sogou pinyin"
+sudo dpkg -i files/sogoupinyin_2.2.0.0108_amd64.deb
+sudo apt install -f
+sudo dpkg -i files/sogoupinyin_2.2.0.0108_amd64.deb
+sudo apt remove --purge fcitx-ui-qimpanel
+
+call_seperator
 source files/uscmd.sh
 echo -e "${Green}Done!${NC}"
 echo ""
